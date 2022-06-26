@@ -1,3 +1,5 @@
+package Money;
+
 import java.util.Currency;
 
 public class Money {
