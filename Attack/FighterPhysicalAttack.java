@@ -1,13 +1,17 @@
 package Attack;
 
-public class FighterPhysicalAttack extends PhysicalAttack {
-    @Override
-    int singleAttackDamage() {
-        return super.singleAttackDamage() + 20;
+public class FighterPhysicalAttack {
+    private final PhysicalAttack _physicalAttack;
+
+    FighterPhysicalAttack() {
+        _physicalAttack = new PhysicalAttack();
     }
 
-    @Override
+    int singleAttackDamage() {
+        return _physicalAttack.singleAttackDamage() + 20;
+    }
+
     int dobleAttackDamage() {
-        return super.dobleAttackDamage() + 10;
+        return _physicalAttack.dobleAttackDamage() + 10;
     }
 }
